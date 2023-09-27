@@ -1,0 +1,16 @@
+# macOS and VS code dir
+.DS_Store
+.vscode/
+
+# Python related dir
+__pycache__/
+build/
+nlg.egg-info/
+.python-version
+venv/
+
+# Personal development dir
+__misc__/
+
+# Generated files after installation
+*.so
