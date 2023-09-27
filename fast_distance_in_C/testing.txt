@@ -1,0 +1,33 @@
+This is to test whether the C module utf8 is ok.
+Run the following command:
+
+	python -m doctest testing.txt
+
+Nothing is displayed when all tests are successfully passed.
+
+
+>>> from _fast_distance import *
+
+>>> init_memo_fast_distance('太郎は花子が好き。')
+>>> memo_fast_distance('太郎は花子が好き。')
+0
+
+>>> memo_fast_distance('太郎は征子が嫌い。')
+6
+
+>>> init_memo_fast_distance('太郎が太い。')
+>>> memo_fast_distance('花子も太い。')
+6
+>>> memo_fast_distance('太郎が大きい。')
+3
+
+>>> init_memo_fast_distance('nées')
+>>> memo_fast_distance('nees')
+2
+>>> memo_fast_distance('dues')
+4
+
+>>> init_memo_fast_distance('dues')
+>>> memo_fast_distance('nées')
+4
+
